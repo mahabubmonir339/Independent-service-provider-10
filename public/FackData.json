@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Oral English Practice",
+        "id": 1,
+        "fee": 70,
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/robofun_website_0094.jpg",
+        "weeks": 14,
+        "details": "Learn for your future. Start moving toward where you want to be.Your goal may be to learn a new skill or do something that you know will improve your situation. It might be a course of study or even a new career.",
+        "lesson": "24"
+    },
+    {
+        "title": "General Knowledge",
+        "id": 2,
+        "fee": 89,
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/lead_tnf_easter_2017_lawnpic01_0_1.jpg",
+        "weeks": 13,
+        "details": "General Knowledge helps improve our IQ, along with that it can be helpful in different competitive exam.",
+        "lesson": "34"
+    },
+    {
+        "title": "Around the World",
+        "id": 3,
+        "fee": 70,
+        "details": "From this course, we will learn about different cities of the world, their geography, culture, religion, food habit and many more.",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/aloha-camps-hive-summer-2019-158.jpg",
+        "weeks": 14,
+        "lesson": "16"
+    },
+    {
+        "title": "Handwriting",
+        "id": 4,
+        "fee": 20,
+        "details": "Improve your Handwriting - Improve your Life. Increase your confidence and success in business and academic endeavors by improving your handwriting.",
+        "img": "https://mews.in/wp-content/uploads/2021/12/list-of-best-handwriting-in-the-world.jpg",
+        "weeks": "15",
+        "lesson": "14"
+    },
+    {
+        "title": "Handwriting",
+        "id": 4,
+        "fee": 20,
+        "details": "Improve your Handwriting - Improve your Life. Increase your confidence and success in business and academic endeavors by improving your handwriting.",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/after_school_nycparks_0.jpg",
+        "weeks": "15",
+        "lesson": "14"
+    },
+    {
+        "title": "Drawing",
+        "id": 4,
+        "fee": 15,
+        "details": "M.Jahangir Hossain Director of PROTIVA Fine arts Academy, Fine arts teacher at PROYASH (A creative organization for autistic children run",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/holi-hooray-2018-at-brooklyn-childrens-museum.jpg-6653-1200x600_0.jpg",
+        "weeks": "12",
+        "lesson": "12"
+    },
+    {
+        "title": "Coding Programs for Kids",
+        "id": 4,
+        "fee": 50,
+        "details": "Basic programming has become an essential skill for grown-ups and children alike, and the internet is full of coding programs for kids.",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/kodable-2edit_0.jpg",
+        "weeks": "15",
+        "lesson": "14"
+    },
+    {
+        "title": "Cartooning and Doodling",
+        "id": 4,
+        "fee": 40,
+        "details": "Inspire your child into drawing action in this hour-long virtual class. The class teaches a free-form style that deals with the elements of design (color, line, shape, form, and texture) to acheive detailed works of art.",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/ariya_mixes_colors.jpg",
+        "weeks": "15",
+        "lesson": "14"
+    },
+    {
+        "title": "Piano Lessons for Kids",
+        "id": 4,
+        "fee": 25,
+        "details": "Learn piano online with professional experts from the best music schools in the country. Pixical provides gamification, peer learning, and play, along with interaction for the best learning experience.",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/2_1_0.png",
+        "weeks": "15",
+        "lesson": "14"
+    },
+    {
+        "title": "Virtual Pre-Ballet Class",
+        "id": 4,
+        "fee": 50,
+        "details": "This virtual Pre-Ballet class for three to five year olds introduces basic vocabulary, positions, concepts and rhythms of ballet. Classical ballet is introduced in a fun and creative way with an emphasis on movement quality and musicality. ",
+        "img": "https://static.mommypoppins.com/styles/image960x650/s3/6_15_10-11am.jpg",
+        "weeks": "15",
+        "lesson": "14"
+    }
+]

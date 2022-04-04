@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Oral English Practice",
+        "id": 1,
+        "fee": 70,
+        "img": "https://i.ytimg.com/vi/hptsPvN7lU0/maxresdefault.jpg",
+        "weeks": 14,
+        "details": "Learn for your future. Start moving toward where you want to be.Your goal may be to learn a new skill or do something that you know will improve your situation. It might be a course of study or even a new career.",
+        "lesson": "24"
+    },
+    {
+        "title": "General Knowledge",
+        "id": 2,
+        "fee": 89,
+        "img": "https://leverageedu.com/blog/wp-content/uploads/2020/02/General-Knowledge-for-Kids.jpg",
+        "weeks": 13,
+        "details": "General Knowledge helps improve our IQ, along with that it can be helpful in different competitive exam.",
+        "lesson": "34"
+    },
+    {
+        "title": "Around the World",
+        "id": 3,
+        "fee": 70,
+        "details": "From this course, we will learn about different cities of the world, their geography, culture, religion, food habit and many more.",
+        "img": "https://wallpaperaccess.com/full/2097777.jpg",
+        "weeks": 14,
+        "lesson": "16"
+    }
+]
