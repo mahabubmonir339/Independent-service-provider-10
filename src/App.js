@@ -5,12 +5,12 @@ import { Routes, Route } from "react-router-dom";
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
-import Services from './Components/Services/Services';
 import Contact from './Components/Contact/Contact';
 import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import Blogs from './Components/Blogs/Blogs';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Review from './Components/Reviews/Reviews';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="services" element={<Services />} />
+        <Route path="reviews" element={<Review></Review>} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />

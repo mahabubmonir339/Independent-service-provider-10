@@ -10,7 +10,7 @@ const Header = () => {
                 <h2>E-Commerce Educare</h2>
                 <Nav className="me-auto">
                     <Link to="/home">Home</Link>
-                    <Link to="/services">Services</Link>
+                    <Link to="/reviews">Review</Link>
                     <Link to="/dashboard">Dashboard</Link>
                     <Link to="/blogs">Blogs</Link>
                     <Link to="/contact">Contact</Link>

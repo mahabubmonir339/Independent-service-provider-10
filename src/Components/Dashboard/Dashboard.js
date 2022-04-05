@@ -1,12 +1,19 @@
-
-import React from 'react';
-import User from '../../hooks/dashboardServices';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Bar, BarChart } from 'recharts';
 
 const Dashboard = () => {
+    const [Dashb, setDashb] = useState([]);
+    useEffect(() => {
+        axios.get('./Db.json')
+            .then(data => setDashb(data))
+    }, [])
     return (
-        <div>
-            <h1><User></User></h1>
-        </div>
+        <>
+            <BarChart width={850} height={640} data={Dashb}>
+                <Bar dataKey="month" fill="#8884d8" />
+            </BarChart>
+        </>
     );
 };
 
