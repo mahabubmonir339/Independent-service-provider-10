@@ -9,7 +9,7 @@ import Contact from './Components/Contact/Contact';
 import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import Blogs from './Components/Blogs/Blogs';
-import Service from './Components/Services/Service';
+import Services from './Components/Services/Services';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="service" element={<Service />} />
+        <Route path="services" element={<Services />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
