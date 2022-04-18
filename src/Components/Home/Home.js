@@ -43,7 +43,7 @@ const Home = () => {
                 <Container>
 
                     <div>
-                        <h2 className="text-danger fw-bold text-center p-3" style={{ textShadow: "2px 2px 2px #000000" }}>Course And Reviews</h2>
+                        <h2 className="text-danger fw-bold text-center p-3" style={{ textShadow: "2px 2px 2px #000000" }}>Our Courses</h2>
                         <Row xs={1} sm={2} md={3} className="g-1">
                             {
                                 homeService.map(c => <HomeService key={c.id} c={c}></HomeService>)
@@ -54,7 +54,7 @@ const Home = () => {
 
                     <div className="row justify-content-center ">
                         <div className="col-lg-7 col-md-8 mt-2 pb-5">
-                            <div className="text-center"> <Link className="btn btn-md theme-bg-light theme-cl " to="/reviews">See All Reviews</Link></div>
+                            <div className="text-center"> <Link className="btn btn-md theme-bg-light theme-cl " to="/reviews">See All Explore</Link></div>
                         </div>
                     </div>
                 </Container>

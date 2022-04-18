@@ -9,8 +9,7 @@ import Contact from './Components/Contact/Contact';
 import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import Blogs from './Components/Blogs/Blogs';
-import Dashboard from './Components/Dashboard/Dashboard';
-import Review from './Components/Reviews/Reviews';
+import Service from './Components/Services/Service';
 
 function App() {
   return (
@@ -20,12 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="reviews" element={<Review></Review>} />
+        <Route path="service" element={<Service />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
-
-
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>

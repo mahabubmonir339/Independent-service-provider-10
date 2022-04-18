@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap';
 import useServices from '../../hooks/useServices';
 import ViewServices from '../ViewServices/ViewServices';
 
-const Review = () => {
+const Service = () => {
     const [services] = useServices();
 
     return (
@@ -18,4 +18,4 @@ const Review = () => {
     );
 };
 
-export default Review;
+export default Service;

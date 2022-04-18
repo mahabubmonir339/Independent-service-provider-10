@@ -7,11 +7,10 @@ const Header = () => {
     return (
         <Navbar bg="primary" variant="dark">
             <Container>
-                <h2>E-Educare</h2>
+                <h2>Tutor-Educare</h2>
                 <Nav className="me-auto">
                     <Link to="/home">Home</Link>
-                    <Link to="/reviews">Review</Link>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/services">Services</Link>
                     <Link to="/blogs">Blogs</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/about">About</Link>
