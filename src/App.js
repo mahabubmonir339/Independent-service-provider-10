@@ -10,6 +10,8 @@ import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import Blogs from './Components/Blogs/Blogs';
 import Services from './Components/Services/Services';
+import SignUp from './Components/Login/SignUp';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signUp" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>

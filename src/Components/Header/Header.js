@@ -6,17 +6,19 @@ import './Header.css'
 const Header = () => {
     return (
         <Navbar bg="primary" variant="dark">
-            <Container>
-                <h2>Tutor-Educare</h2>
-                <Nav className="me-auto">
+            <Container className="d-flex">
+                <h1>Tutor-Educare</h1>
+                <div><Nav className="me-auto">
                     <Link to="/home">Home</Link>
                     <Link to="/services">Services</Link>
                     <Link to="/blogs">Blogs</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/about">About</Link>
+                    <Link to="/login"><b>LogIn</b></Link>
+                    <Link to="/signUp"><b>SignUp</b></Link>
 
 
-                </Nav>
+                </Nav></div>
             </Container>
         </Navbar>
 
