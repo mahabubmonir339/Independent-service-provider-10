@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button, Row, Container } from 'react-bootstrap';
-import main from '../../assets/banner.png'
+import main from '../../assets/study.png'
 import './Home.css';
 import { Link } from 'react-router-dom';
 import useHomeService from '../../hooks/useHomeServices';
@@ -33,7 +33,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="col-xl-5 col-lg-5 col-md-12">
-                                <img src={main} className="main-banner-png" alt="img" />
+                                <img src={main} className="main-banner-png img-fluid" alt="img" />
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const Home = () => {
 
                     <div className="row justify-content-center ">
                         <div className="col-lg-7 col-md-8 mt-2 pb-5">
-                            <div className="text-center"> <Link className="btn btn-md theme-bg-light theme-cl " to="/reviews">See All Explore</Link></div>
+                            <div className="text-center"> <Link className="btn btn-md theme-bg-light theme-cl " to="/services">See All Explore</Link></div>
                         </div>
                     </div>
                 </Container>
