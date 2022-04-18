@@ -7,5 +7,5 @@
 4. This site same basic question and answer blogs page.
 5. This site part by part problem solve of ruls.
 
-# Available Scripts
-In the project directory, you can run.
+# list of technologies (frameworks, libraries) used in your project.
+ ReactDom. React Route, Bootstrip, FireBase .
