@@ -1,6 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Card, Col, Image } from 'react-bootstrap';
+import RequireAuth from '../Login/RequireAuth/RequireAuth';
 
 const ViewServices = (props) => {
     const { title, details, fee, lesson, weeks, img } = props.course;

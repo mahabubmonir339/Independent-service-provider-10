@@ -1,89 +1,109 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useRef } from "react";
+import { Button, Form } from "react-bootstrap";
+import {
+    useSendPasswordResetEmail,
+    useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
-// import { useHistory, useLocation } from 'react-router';
-import useAuth from '../../hooks/useAuth';
+import SocialLogin from "../SocialLogin/SocialLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { async } from "@firebase/util";
+import { sendPasswordResetEmail } from "firebase/auth";
+import auth from "../../FirebaseInit";
 
 const Login = () => {
-    const history = useAuth();
+    const emailRef = useRef("");
+    const passwordRef = useRef("");
+    const navigate = useNavigate();
     const location = useLocation();
-    const { signInUsingGoogle, setUser, email, password, setError, toggleLogin, processLogin, handleRegistration, handleEmailChange, handlePasswordChange, error } = useAuth();
-    const [logViaEmail, setLogViaEmail] = useState(false);
 
-    const redirect_url = location.state?.from || '/home';
+    let from = location.state?.from?.pathname || "/";
 
-    const handleBtnEmail = () => {
-
-        setLogViaEmail(true);
-
-        // history.push('/register')
+    const [signInWithEmailAndPassword, user, loading, error] =
+        useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    if (user) {
+        navigate(from, { replace: true });
     }
-    const handleBtnGoogle = () => {
 
-        setLogViaEmail(false);
-        signInUsingGoogle()
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user);
-                history.push(redirect_url);
-            })
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
 
-    }
-    const signViaEmail = () => {
-        processLogin(email, password)
-            .then(result => {
-                // const user = result.user;
-                setUser(result.user)
-                setError('');
-                history.push(redirect_url);
-            })
-    }
-    const handleLogin = (e) => {
-        e.preventDefault();
-        console.log('ligin clicked');
-        toggleLogin(true);
-        signViaEmail();
-    }
+        signInWithEmailAndPassword(email, password);
+    };
+
+    const navigateRegister = (event) => {
+        navigate("/register");
+    };
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast("Sent email");
+        } else {
+            toast("please enter your email address");
+        }
+    };
+
     return (
-        <div className="mx-5 mb-3 container mx-auto w-50">
-            <h1>Please Login Here</h1>
+        <div className="container w-50 mx-auto">
+            <h2 className="text-primary text-center mt-2">Please Login</h2>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                        ref={emailRef}
+                        type="email"
+                        placeholder="Enter email"
+                        required
+                    />
+                    <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
 
-            <button className="btn btn-danger" onClick={handleBtnGoogle} >Login Using Google Account</button><br /><br />
-
-            <button className="btn btn-danger mb-5" onClick={handleBtnEmail}>Login Using Email</button>
-
-            {onsubmit = { handleRegistration }}
-            {logViaEmail &&
-                <form onSubmit={handleLogin}>
-                    <h3 className="text-primary"> Login form </h3>
-
-                    <div className="row mb-3">
-                        <label htmlFor="inputEmail" className="col-sm-2 col-form-label">Your Email</label>
-                        <div className="col-sm-10">
-                            <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail" placeholder="Enter your email" required />
-                        </div>
-                    </div>
-                    <div className="row mb-3">
-                        <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Your Password</label>
-                        <div className="col-sm-10">
-                            <input type="password" onBlur={handlePasswordChange} className="form-control" id="inputPassword" placeholder="Enter your password" required />
-                        </div>
-                    </div>
-
-                    <div className="row mb-3 text-danger">{error}</div>
-                    <button type="submit" className="btn btn-primary">
-                        Login
-                    </button>
-
-
-
-                </form>
-
-            }
-
-
-
-
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                        ref={passwordRef}
+                        type="password"
+                        placeholder="Password"
+                        required
+                    />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+            <p>
+                New to Photo Factory?{" "}
+                <Link
+                    to="/register"
+                    className="text-danger pe-auto text-decoration-none"
+                    onClick={navigateRegister}
+                >
+                    Please Register
+                </Link>{" "}
+            </p>
+            <p>
+                Forget Password?{" "}
+                <button
+                    className="btn btn-link text-primary pe-auto text-decoration-none"
+                    onClick={resetPassword}
+                >
+                    Reset Password
+                </button>{" "}
+            </p>
+            <SocialLogin></SocialLogin>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

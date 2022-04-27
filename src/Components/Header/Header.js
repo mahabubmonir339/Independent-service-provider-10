@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Navbar bg="primary" variant="dark">
             <Container className="d-flex">
-                <h1>Tutor-Educare</h1>
+                <Link to="/"><h1>Tutor-Educare</h1></Link>
                 <div><Nav className="me-auto">
                     <Link to="/home">Home</Link>
                     <Link to="/services">Services</Link>
@@ -15,7 +15,7 @@ const Header = () => {
                     <Link to="/contact">Contact</Link>
                     <Link to="/about">About</Link>
                     <Link to="/login"><b>LogIn</b></Link>
-                    <Link to="/signUp"><b>SignUp</b></Link>
+                    <Link to="/register"><b>SignUp</b></Link>
 
 
                 </Nav></div>
